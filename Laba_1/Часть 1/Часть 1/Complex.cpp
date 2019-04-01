@@ -8,14 +8,35 @@ using namespace std;
 float Enter()
 {
 	string proverka;
-again_1:
-	cin >> proverka;
-	for (int i = 0; i < proverka.length(); i++)
-		if ((proverka[i] < '0' || proverka[i] > '9') && proverka[i] != '.')
-		{
-			cout << "Ошибка ввода!\nВведите число заново: ";
-			goto again_1;
-		}
+	bool indikator = true;
+	int k;
+	while (indikator)
+	{
+		indikator = false;
+		k = 0;
+		cin >> proverka;
+		if ((proverka[0] == '0') && (proverka[1] == '0'))
+			indikator = true;
+		if ((proverka[0] == '-') && proverka.length() == 1)
+			indikator = true;
+		if ((proverka[0] == '-') && (proverka[1] == '.'))
+			indikator = true;
+		if (((proverka[0] < '0') || (proverka[0] > '9')) && (proverka[0] != '-'))
+			indikator = true;
+		for (int i = 1; i < proverka.length(); i++)
+			if (proverka[i] == '.')
+				k++;
+		for (int i = 1; i < proverka.length(); i++)
+			if (((proverka[i] < '0') || (proverka[i] > '9')) && (proverka[i] != '.'))
+				indikator = true;
+		if (k > 1)
+			indikator = true;
+		for (int i = 1; i < proverka.length(); i++)
+			if (proverka[i] == '.')
+				proverka[i] = ',';
+		if (indikator) 
+			cerr << "Ошибка ввода!\nВведите число заново: ";
+	}
 	return stof(proverka);
 }
 

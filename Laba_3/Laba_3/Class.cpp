@@ -1,7 +1,10 @@
 #include "pch.h"
 #include <iostream>
 #include <string>
-#include "Class.h"
+#include "Child.h"
+#include "Tiles.h"
+#include "Complex.h"
+#include "Vector.h"
 
 using namespace std;
 

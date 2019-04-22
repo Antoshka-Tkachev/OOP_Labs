@@ -6,7 +6,7 @@ Boss::Boss() : Human()
 	number_of_workers = 0;
 }
 
-Boss::Boss(int number_of_workers) : Human(name, surname, midname, age)
+Boss::Boss(string name, string surname, string midname, int age, int number_of_workers) : Human(name, surname, midname, age)
 {
 	this->number_of_workers = number_of_workers;
 }

@@ -6,7 +6,7 @@ using namespace std;
 
 class Human
 {
-protected: // почему не работает функция print в классе Boss и Student, если сделать ptivate?
+protected: 
 	string name;
 	string surname;
 	string midname;
@@ -14,7 +14,7 @@ protected: // почему не работает функция print в кла�
 public:
 	Human();
 	Human(string name, string surname, string midname, int age);
-	virtual void print() = 0; //где писать override?
+	virtual void print() = 0;
 	~Human() {}
 };
 

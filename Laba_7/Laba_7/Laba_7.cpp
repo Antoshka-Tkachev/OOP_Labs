@@ -10,9 +10,11 @@ using namespace std;
 int main()
 {
 	setlocale(LC_ALL, "Russain");
-	Boss a;
+	Boss a("Boss", "Big Boss", "Very Big Boss", 40, 123);
 	a.print();
+
 	Student b;
-	b.print();
+	Human* ptr_human = &b;
+	ptr_human->print();
 }
 

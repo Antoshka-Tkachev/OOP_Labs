@@ -10,8 +10,8 @@ private:
 	int number_of_workers;
 public:
 	Boss();
-	Boss(int number_of_workers); // как сделать наследование этого конструктора?
-	void print();
+	Boss(string name, string surname, string midname, int age, int number_of_workers);
+	void print()override;
 	~Boss() {}
 };
 

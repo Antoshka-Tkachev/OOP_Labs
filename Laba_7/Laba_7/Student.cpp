@@ -6,7 +6,7 @@ Student::Student() : Human()
 	on_lesson = true;
 }
 
-Student::Student(bool on_lesson) : Human(name, surname, midname, age)
+Student::Student(string name, string surname, string midname, int age, bool on_lesson) : Human(name, surname, midname, age)
 {
 	this->on_lesson = on_lesson;
 }

@@ -10,8 +10,8 @@ private:
 	bool on_lesson;
 public:
 	Student();
-	Student(bool on_lesson); // как сделать наследование этого конструктора?
-	void print();
+	Student(string name, string surname, string midname, int age, bool on_lesson);
+	void print()override;
 	~Student() {}
 };
 
